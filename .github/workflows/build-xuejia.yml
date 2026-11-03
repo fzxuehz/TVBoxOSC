@@ -23,7 +23,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Prepare signing keystore
+      - name: Prepare keystore and local.properties
         run: |
           set -euo pipefail
           if [ ! -f .key/release.jks ]; then
@@ -35,6 +35,8 @@ jobs:
             git commit -m "chore: add signing keystore"
             git push
           fi
+          printf 'sdk.dir=%s\nstoreFile=%s\nstorePassword=xuejiatv2026\nkeyAlias=xuejia\nkeyPassword=xuejiatv2026\n' "$ANDROID_HOME" "$GITHUB_WORKSPACE/.key/release.jks" > local.properties
+          cat local.properties
 
       - name: Build release APKs
         run: |
