@@ -50,8 +50,8 @@ jobs:
           BT="$(ls $ANDROID_HOME/build-tools/ | sort -V | tail -1)"
           mkdir -p dist
           echo "== 搜索APK =="
-          find "" -name "*.apk" -type f -not -path "*/.git/*" -print
-          for f in $(find "" -name "*.apk" -type f -not -path "*/.git/*"); do
+          find . -name "*.apk" -type f -not -path "./.git/*" -print
+          for f in $(find . -name "*.apk" -type f -not -path "./.git/*"); do
             base=$(basename "$f" .apk)
             cp "$f" "dist/${base}-signed.apk"
             "$ANDROID_HOME/build-tools/$BT/apksigner" sign --ks .key/release.jks --ks-key-alias xuejia --ks-pass pass:xuejiatv2026 --key-pass pass:xuejiatv2026 "dist/${base}-signed.apk"
