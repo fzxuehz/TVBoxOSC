@@ -2,8 +2,7 @@
 <resources>
   <string name="app_name">薛家影视</string>
   <string name="app_home">首页</string>
-  <string name="app_source">
-  </string>
+  <string name="app_source">https://www.252035.xyz/z/FongMi.json</string>
 
     // Home Page //
     <string name="hm_ok">加载成功</string><string name="hm_notok">加载失败</string><string name="hm_retry">重试</string><string name="hm_cancel">取消</string><string name="hm_exit">再按一次返回键退出应用</string><string name="hm_exit_live">再按一次返回键退出直播</string><string name="hm_date1">MM月dd日</string><string name="hm_date2">EE HH:mm</string><string name="hm_hist">历史</string><string name="hm_live">直播</string><string name="hm_search">搜索</string><string name="hm_push">推送</string><string name="hm_file">文件</string><string name="hm_fav">收藏</string><string name="hm_setting">设置</string><string name="hm_style_line">单行显示</string><string name="hm_style_grid">多行显示</string><string name="hm_hist_del">已删除当前记录</string><string name="hm_cache_del">已删除缓存</string>
