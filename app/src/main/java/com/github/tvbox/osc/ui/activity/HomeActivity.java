@@ -100,6 +100,7 @@ public class HomeActivity extends BaseActivity {
     private ImageView tvStyle;
     private ImageView tvDraw;
     private ImageView tvMenu;
+    private ImageView tvCloud;
     private TextView tvDate;
     private TvRecyclerView mGridView;
     private NoScrollViewPager mViewPager;
@@ -166,6 +167,7 @@ public class HomeActivity extends BaseActivity {
         this.tvStyle = findViewById(R.id.tvStyle);
         this.tvDraw = findViewById(R.id.tvDrawer);
         this.tvMenu = findViewById(R.id.tvMenu);
+        this.tvCloud = findViewById(R.id.tvCloud);
         this.tvDate = findViewById(R.id.tvDate);
         this.contentLayout = findViewById(R.id.contentLayout);
         this.mGridView = findViewById(R.id.mGridViewCategory);
@@ -339,6 +341,13 @@ public class HomeActivity extends BaseActivity {
             }
         });
         // Button : Settings >> To go into Settings --------------------
+        tvCloud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                com.github.tvbox.osc.ui.dialog.CloudSourceDialog.show(HomeActivity.this);
+            }
+        });
+
         tvMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
