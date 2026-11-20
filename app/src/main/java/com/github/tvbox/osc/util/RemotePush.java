@@ -70,6 +70,10 @@ public class RemotePush {
                 Hawk.put(HawkConfig.API_URL, url);
                 ApiConfig.get().loadConfig(false, new ApiConfig.LoadConfigCallback() {
                     @Override
+                    public void retry() {
+                    }
+
+                    @Override
                     public void success() {
                         Hawk.put("remote_push_time", time);
                         toast("远程推送已更新:" + name);
