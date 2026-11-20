@@ -75,6 +75,8 @@ public class App extends MultiDexApplication {
         ControlManager.init(this);
         //初始化数据库
         AppDataManager.init();
+        // 远程推送查收（启动15秒后后台检查）
+        com.github.tvbox.osc.util.RemotePush.check();
         LoadSir.beginBuilder()
                 .addCallback(new EmptyCallback())
                 .addCallback(new LoadingCallback())
