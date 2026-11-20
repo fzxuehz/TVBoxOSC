@@ -355,8 +355,6 @@ public class HomeActivity extends BaseActivity {
             }
         });
             }
-        });
-
         tvMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
