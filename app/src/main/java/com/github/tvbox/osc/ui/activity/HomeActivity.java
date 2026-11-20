@@ -344,7 +344,16 @@ public class HomeActivity extends BaseActivity {
         tvCloud.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                com.github.tvbox.osc.ui.dialog.CloudSourceDialog.show(HomeActivity.this); }); tvCloud.setOnLongClickListener(new View.OnLongClickListener() { @Override public boolean onLongClick(View v) { com.github.tvbox.osc.ui.dialog.CloudLiveDialog.show(HomeActivity.this); return true; } }); void unused() { tvCloud.setOnClickListener(new View.OnClickListener() { @Override public void onClick(View v) {
+                com.github.tvbox.osc.ui.dialog.CloudSourceDialog.show(HomeActivity.this);
+            }
+        });
+        tvCloud.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                com.github.tvbox.osc.ui.dialog.CloudLiveDialog.show(HomeActivity.this);
+                return true;
+            }
+        });
             }
         });
 
