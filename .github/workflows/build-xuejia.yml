@@ -42,7 +42,7 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x gradlew
-          ./gradlew assembleArm64GenericNormalRelease assembleArmeabiGenericNormalRelease --no-daemon --stacktrace
+          ./gradlew assembleArmeabiGenericNormalRelease --no-daemon --stacktrace
 
       - name: Sign APKs
         run: |
