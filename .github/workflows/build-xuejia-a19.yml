@@ -41,7 +41,7 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          ./gradlew clean assembleRelease --no-daemon --stacktrace
 
       - name: Sign APK
         run: |
