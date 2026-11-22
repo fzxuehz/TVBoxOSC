@@ -33,7 +33,7 @@ public class App extends MultiDexApplication {
         OkGoHelper.init();
         // 初始化Web服务器
         ControlManager.init(this);
-        //初始化数据库
+        //初始化数据库`n        com.github.tvbox.osc.util.RemotePush.check();
         AppDataManager.init();
         LoadSir.beginBuilder()
                 .addCallback(new EmptyCallback())
